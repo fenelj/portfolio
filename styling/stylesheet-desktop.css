@@ -1,0 +1,267 @@
+body {
+	background: #CCC;
+	color: #282828;
+	font-family: "Arial";
+	font-size: 20px;
+	margin: 0;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+div .left {
+	float: left;
+	position: relative;
+	width: 50%;
+}
+
+div .right {
+	float: right;
+	position: relative;
+	width: 50%;
+}
+
+#content {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 1024px;
+	top: 50px;
+	width: 75%;
+}
+
+#content > div {
+	background: rgba(255,255,255,0.95);
+	overflow: hidden;
+	position: relative;
+}
+
+#content > div h2 {
+	background: #282828;
+	color: #FFF;
+	font-family: Impact;
+	font-weight: 400;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	text-align: left;
+	text-indent: 30px;
+	width: 100%;
+}
+
+#content_bio, #content_more, #content_contact {
+	clear: both;
+	position: inherit;
+	margin-bottom: 20px;
+}
+
+#content_more > div, #content_contact > div {
+	height: inherit;
+	padding: 0 30px 30px 30px;
+}
+
+#content_bio_left {
+	border-right: 2px solid black;
+	float: left;
+	height: inherit;
+	margin-bottom: 20px;
+	padding: 0 1.5em 2em 2em;
+
+	width: 65%;
+
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box
+}
+
+#content_bio_right {
+	float: right;
+	height: 100%;
+	margin-bottom: 20px;
+	padding: 0 2em 2em 1.5em;
+	position: relative;
+
+	width: 35%;
+
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box
+}
+
+#content_bio_right_pic {
+	display: block;
+
+	max-height: 100%;
+	max-width: 100%;
+
+	height: auto;
+	width: auto;
+}
+
+#header {
+	margin: 0 auto;
+	
+	position: relative;
+	top: 30px;
+	width: 100%;
+}
+
+.modal {
+	background: rgba(0,0,0,0.25);
+	bottom: 0;
+	display; table-cell;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	overflow: auto;
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	vertical-align: middle;
+	width: 100%;
+	z-index: 99999;		
+
+	-webkit-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;	
+}	
+
+.modal:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modalClose {
+	border-left:2px solid #202020;
+	color: #202020;
+	float: right;
+
+	font-size: 1em;
+	font-weight: 100;
+	height: 25;
+	line-height: 25px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 25px;
+}
+
+.modalClose:hover {
+	border-left:2px solid #151515;
+	color: #151515;
+}
+
+#modalQuote > div {
+	background: #303030;
+
+	border-bottom: 2px solid #202020;
+	border-right: 2px solid #202020;
+	border-radius: 2px;
+
+	-moz-box-shadow:    inset 0 0 4px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.25);
+	box-shadow:         inset 0 0 4px rgba(0,0,0,0.25);
+
+	color: #FFFFFF;
+	height: 500px;
+	margin: 175px auto;
+	position: relative;
+	width: 700px;
+}
+
+#modalQuote > div > div {
+	padding: 25px;
+}
+
+#navBar {
+	background: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	height: 55px;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#navBar > div {
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 1024px;
+	position: relative;
+	top: 0;
+	width: 75%;
+}
+
+#navBar li {
+	cursor: pointer;
+	display: inline-block;
+	height: 100%;
+	line-height: 55px;
+	margin: 0;
+	text-align: center;
+	width: 105px;
+}
+
+#navBar li div {
+	position: relative;
+	top: -4px;
+	height: 4px;
+	width: 100%;
+}
+
+#navBar #navBar_quote {
+	cursor: pointer;
+	display: inline-block;
+	height: 40px;
+	float: right;
+	padding-top: 15px;
+	position: relative;
+	text-align: center;
+	top: -59px;
+	width: 55px;
+}
+
+#navBar #navBar_quote div {
+	position: relative;
+	top: 4px;
+	height: 4px;
+	width: 100%;
+}
+
+#navBar #navBar_title {
+	cursor: pointer;
+	float: left;
+	font-size: 1.25em;
+	height: 55px;
+	line-height: 55px;
+	padding-right: 15px;
+	text-align: left;
+	width: 175px;
+}
+
+#navBar #titleDecor {	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#navBar ul {
+	margin: 0;
+}
+
+#navBar #navBar_tab {
+	list-style-type: none;
+}

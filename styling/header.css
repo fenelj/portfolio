@@ -1,0 +1,48 @@
+#head {
+	background: black;
+	color: #FFF;
+	height: inherit;
+	width: inherit;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#head_1, #head_2, #head_3 {
+	bottom: 0px;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 1;
+	
+	-webkit-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	
+}
+
+#head_1 > .table, #head_2 > .table, #head_3 > .table {
+	display: table;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+#playPause {
+	display: inline-block;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.table > .cell {
+	display: table-cell;
+	vertical-align: middle;
+}

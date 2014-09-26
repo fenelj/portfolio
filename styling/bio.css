@@ -1,0 +1,11 @@
+#content_bio {
+	text-align: justify;
+}
+
+.content_bio_expansion {
+	cursor: pointer;
+}
+
+#content_bio_expansion1_text, #content_bio_expansion2_text, #content_bio_expansion3_text {
+	display: none;
+}
