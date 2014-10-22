@@ -1,6 +1,6 @@
 <?php
 
-session_name("fancyform");
+session_name("contactform");
 session_start();
 
 
@@ -53,7 +53,7 @@ if($_SESSION['sent'])
 <div id="main-container">
 
 	<div id="form-container">
-    <h1>Fancy Contact Form</h1>
+    <h1>Contact Me</h1>
     <h2>Drop us a line and we will get back to you</h2>
     
     <form id="contact-form" name="contact-form" method="post" action="submit.php">
@@ -72,10 +72,10 @@ if($_SESSION['sent'])
           <td><label for="subject">Subject</label></td>
           <td><select name="subject" id="subject">
             <option value="" selected="selected"> - Choose -</option>
-            <option value="Question">Question</option>
-            <option value="Business proposal">Business proposal</option>
-            <option value="Advertisement">Advertising</option>
+            <option value="Business proposal">Business Proposal</option>
             <option value="Complaint">Complaint</option>
+            <option value="Inquiry">Inquiry</option>
+            <option value="Personal">Personal</option>
           </select>          </td>
           <td>&nbsp;</td>
         </tr>
@@ -100,9 +100,6 @@ if($_SESSION['sent'])
       </form>
       <?=$success?>
     </div>
-	<div class="tutorial-info">	
-    This is a Tutorialzine demo. View the <a href="http://tutorialzine.com/2009/09/fancy-contact-form/">original tutorial</a>, or download the <a href="demo.zip">demo files</a>.    </div>
-
 </div>
 
 </body>

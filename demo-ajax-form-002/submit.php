@@ -2,14 +2,14 @@
 
 /* config start */
 
-$emailAddress = '';
+$emailAddress = 'feneljoseph@knights.ucf.edu';
 
 /* config end */
 
 
 require "phpmailer/class.phpmailer.php";
 
-session_name("fancyform");
+session_name("contactform");
 session_start();
 
 
@@ -79,7 +79,7 @@ $mail->IsMail();
 $mail->AddReplyTo($_POST['email'], $_POST['name']);
 $mail->AddAddress($emailAddress);
 $mail->SetFrom($_POST['email'], $_POST['name']);
-$mail->Subject = "A new ".mb_strtolower($_POST['subject'])." from ".$_POST['name']." | contact form feedback";
+$mail->Subject = "Webmail: ".$_POST['name']." (".$_POST['subject'].")";
 
 $mail->MsgHTML($msg);
 
