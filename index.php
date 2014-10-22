@@ -1,3 +1,5 @@
+<?php include 'contact-script.php' ?>
+
 <!DOCTYPE html>
 
 <html lang="en">
