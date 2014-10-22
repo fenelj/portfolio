@@ -4,7 +4,7 @@
 	<head>
 
 		<meta charset="utf-8">
-		<meta name="description" content="Gig Radio is an iPhone app that lets you listen to music by bands playing near you tonight.">
+		<meta name="description" content="Online portfolio of UCF student Fenel Joseph. Check it out.">
 		<meta name="author" content="Fenel Joseph">
 		<meta property="og:site_name" content="My Life in Color: Fenel Joseph" >
 		<meta property="og:url" content="http://feneljoseph.com">
@@ -55,54 +55,8 @@
 		</div>
 
 		<div id="header">
-			<!DOCTYPE html>
-
-<html lang="en">
-	<head>
-		<title>header</title>
-		<link rel="stylesheet" type="text/css" href="styling/header.css" />
-
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-	</head>
-
-	<body>
-		
-		<div id="head">
-			<div id="head_1">
-				<div class="table">
-					<div class="cell">
-						<h1>Hi, you've visited my site. It's a work in progress, so bear with me.</h1>
-					</div>
-				</div>
-			</div>
-			<div id="head_2">
-				<div class="table">
-					<div class="cell">
-						<h1>Remember, Rome wasn't built in a day.</h1>
-					</div>
-				</div>
-			</div>
-			<div id="head_3">
-				<div class="table">
-					<div class="cell">
-						<h1>So check out the rest of my site as I continue to build</h1>
-					</div>
-				</div>
-			</div>
-			
-			<div id="playPause">
-				<span id="playPauseButton"><i class="fa fa-pause fa-1x"></i></span>
-			</div>
-			
+			<?php include 'header.html' ?>
 		</div>
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!--<script src="styling/jquery.min.js"></script>-->
-		<script type="text/javascript" src="scripts/header.js"></script>
-	</body>
-
-
-</html>		</div>
 
 		<div id="content">
 
@@ -186,33 +140,7 @@
 				<h2>CONTACT</h2>
 				
 				<div class="left">
-					<p>Fill out the form below.</p>
-
-					<form method="POST" name="ContactForm" action="scripts/contact-form-handler.php"> 
-						<p>
-							<label for='name'>Name:</label> <br>
-							<input type="text" name="name">
-						</p>
-						<p>
-							<label for='email'>Email Address:</label> <br>
-							<input type="text" name="email"> <br>
-						</p>
-						<p>
-							<label for='message'>Message:</label> <br>
-							<textarea name="message"></textarea>
-						</p>
-
-						<input type="submit" value="Submit"><br>
-					</form>
-
-					<script language="JavaScript" type="text/javascript" src="scripts/gen_validatorv31.js">
-
-						var frmvalidator  = new Validator("ContactForm");
-						frmvalidator.addValidation("name","req","Please provide your name");
-						frmvalidator.addValidation("email","req","Please provide your email");
-						frmvalidator.addValidation("email","email","Please enter a valid email address");
-
-					</script>
+					<?php include 'contact.php' ?>
 				</div>
 
 				<div class="right">
@@ -223,51 +151,8 @@
 
 		</div>
 
-		<!DOCTYPE html>
+		<?php include 'footer.html' ?>
 
-<html lang="en">
-	<head>
-		<title>footer</title>
-		<link rel="stylesheet" type="text/css" href="styling/footer.css" />
-
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-	</head>
-
-	<body>
-		
-		<div id="footer">
-			<div>
-
-				<p style="float: left">All Rights Reserved. Fenel Joseph - feneljoseph@knights.ucf.edu</p>
-				
-				<div style="float: right;">
-					
-					<a target="_blank" href="https://www.linkedin.com/in/feneljoseph" alt="Fenel Joseph - https://www.linkedin.com/in/feneljoseph" title="Fenel Joseph - https://www.linkedin.com/in/feneljoseph">
-						<i class="fa fa-linkedin-square fa-3x"></i><!--
-					--></a>&nbsp;&nbsp;
-					
-					<a target="_blank" href="https://www.twitter.com/fenelj" alt="Fenel Joseph - https://www.twitter.com/fenelj" title="Fenel Joseph - https://www.twitter.com/fenelj">
-						<i class="fa fa-twitter-square fa-3x"></i><!--
-					--></a>&nbsp;&nbsp;
-					
-					<a target="_blank" href="https://www.google.com/+FenelJoseph" alt="Fenel Joseph - https://plus.google.com/+FenelJoseph/" title="Fenel Joseph - https://www.google.com/+FenelJoseph">
-						<i class="fa fa-google-plus-square fa-3x"></i><!--
-					--></a>
-
-				</div>
-								
-
-			</div>
-		</div>
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!--<script src="styling/jquery.min.js"></script>-->
-		<!--<script type="text/javascript" src="scripts/footer.js"></script>-->
-	</body>
-
-
-</html>
 		<div id = "modalQuote" class = "modal">
 
 			<div>

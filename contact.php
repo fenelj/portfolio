@@ -12,18 +12,18 @@ $_SESSION['expect'] = $_SESSION['n1']+$_SESSION['n2'];
 $str='';
 if($_SESSION['errStr'])
 {
-	$str='<div class="error">'.$_SESSION['errStr'].'</div>';
-	unset($_SESSION['errStr']);
+  $str='<div class="error">'.$_SESSION['errStr'].'</div>';
+  unset($_SESSION['errStr']);
 }
 
 $success='';
 if($_SESSION['sent'])
 {
-	$success='<h1>Thank you!</h1>';
-	
-	$css='<style type="text/css">#contact-form{display:none;}</style>';
-	
-	unset($_SESSION['sent']);
+  $success='<h1>Thank you!</h1>';
+  
+  $css='<style type="text/css">#contact-form{display:none;}</style>';
+  
+  unset($_SESSION['sent']);
 }
 ?>
 
@@ -34,17 +34,17 @@ if($_SESSION['sent'])
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Fancy Contact Form | Tutorialzine demo</title>
 
-<link rel="stylesheet" type="text/css" href="jqtransformplugin/jqtransform.css" />
-<link rel="stylesheet" type="text/css" href="formValidator/validationEngine.jquery.css" />
-<link rel="stylesheet" type="text/css" href="demo.css" />
+<link rel="stylesheet" type="text/css" href="scripts/jqtransformplugin/jqtransform.css" />
+<link rel="stylesheet" type="text/css" href="scripts/formValidator/validationEngine.jquery.css" />
+<link rel="stylesheet" type="text/css" href="styling/contact.css" />
 
 <?=$css?>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="jqtransformplugin/jquery.jqtransform.js"></script>
-<script type="text/javascript" src="formValidator/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="scripts/jqtransformplugin/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="scripts/formValidator/jquery.validationEngine.js"></script>
 
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
 
 </head>
 
@@ -52,11 +52,11 @@ if($_SESSION['sent'])
 
 <div id="main-container">
 
-	<div id="form-container">
+  <div id="form-container">
     <h1>Contact Me</h1>
     <h2>Drop us a line and we will get back to you</h2>
     
-    <form id="contact-form" name="contact-form" method="post" action="submit.php">
+    <form id="contact-form" name="contact-form" method="post" action="scripts/submit.php">
       <table width="100%" border="0" cellspacing="0" cellpadding="5">
         <tr>
           <td width="15%"><label for="name">Name</label></td>
