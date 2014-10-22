@@ -17,7 +17,9 @@ if($_SESSION['errStr'])
 }
 
 $success='';
-if($_SESSION['sent'])
+
+$sessionSet = ( isset($_SESSION['sent']) )? true: false;
+if( $sessionSet )
 {
   $success='<h1>Thank you!</h1>';
   
