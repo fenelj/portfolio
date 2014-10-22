@@ -34,9 +34,9 @@ if($_SESSION['sent'])
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Fancy Contact Form | Tutorialzine demo</title>
 
-<link rel="stylesheet" type="text/css" href="scripts/jqtransformplugin/jqtransform.css" />
+<!--<link rel="stylesheet" type="text/css" href="scripts/jqtransformplugin/jqtransform.css" />
 <link rel="stylesheet" type="text/css" href="scripts/formValidator/validationEngine.jquery.css" />
-<link rel="stylesheet" type="text/css" href="styling/contact.css" />
+<link rel="stylesheet" type="text/css" href="styling/contact.css" />-->
 
 <?=$css?>
 
