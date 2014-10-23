@@ -28,7 +28,8 @@
       <table width="100%" border="0" cellspacing="0" cellpadding="5">
         <tr>
           <td width="15%"><label for="name">Name</label></td>
-          <td width="70%"><input type="text" class="validate[required,custom[onlyLetter]]" name="name" id="name" value="<?=$_SESSION['post']['name']?>" /></td>
+          <td width="70%"><input type="text" class="validate[required,custom[onlyLetter]]" name="name" id="name" /></td>
+          <!-- value="<?=$_SESSION['post']['name']?>" -->
           <td width="15%" id="errOffset">&nbsp;</td>
         </tr>
         <tr>
