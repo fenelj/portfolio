@@ -2,13 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Fancy Contact Form | Tutorialzine demo</title>
+<title>Contact Form</title>
 
 <!--<link rel="stylesheet" type="text/css" href="scripts/jqtransformplugin/jqtransform.css" />
 <link rel="stylesheet" type="text/css" href="scripts/formValidator/validationEngine.jquery.css" />
 <link rel="stylesheet" type="text/css" href="styling/contact.css" />-->
-
-<?=$css?>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/jqtransformplugin/jquery.jqtransform.js"></script>
@@ -24,7 +22,7 @@
 
   <div id="form-container">
     <h1>Contact Me</h1>
-    <h2>Drop us a line and we will get back to you</h2>
+    <h2>Drop me a line and we will get back to you</h2>
     
     <form id="contact-form" name="contact-form" method="post" action="scripts/submit.php">
       <table width="100%" border="0" cellspacing="0" cellpadding="5">
