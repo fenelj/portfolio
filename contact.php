@@ -1,75 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Contact Form</title>
+<?php
+  $to = "me@ericcolon.com";
+  $emailSent = $name = $from = $subject = $message = "";
+  $nameErr = $fromErr = $subjectErr = $messageErr = "";
+  $allClear = true;
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["name"])) { 
+      $allClear = false;
+      $nameErrClass = "class='error'";
+      $nameErr = "<div class='alert alert-error'><i class='icon-remove'></i> Not a valid name</div>"; 
+    } elseif (!preg_match("/^[a-zA-Z ]*$/",$_POST["name"])) { 
+        $allClear = false;
+        $nameErr = "<div class='alert alert-error'><i class='icon-remove'></i> Only letters and white space allowed</div>"; 
+    } else { $name = cleanInput($_POST["name"]); }
+    if (empty($_POST["email"])) { 
+      $allClear = false;
+      $fromErr = "<div class='alert alert-error'><i class='icon-remove'></i> You did not fill out your email address</div>"; 
+    } elseif (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$_POST["email"])) { 
+      $allClear = false;
+      $fromErr = "<div class='alert alert-error'><i class='icon-remove'></i> Invalid email format</div>"; 
+    } else { $from = cleanInput($_POST["email"]); }
+    if (empty($_POST["subject"])) { 
+      $allClear = false;
+      $subjectErr = "<div class='alert alert-error'><i class='icon-remove'></i> Subject was empty or too short</div>"; 
+    } else { $subject = cleanInput($_POST["subject"]); }
+    if (empty($_POST["message"])) { 
+      $allClear = false;
+      $messageErr = "<div class='alert alert-error'><i class='icon-remove'></i> Message was empty or too short</div>"; 
+    } else { $message = cleanInput($_POST["message"]); }
+    //if there are no error flags then send the email
+    if ($allClear == true) {
+      $headers = "From: '$name' <$from>";
+      mail($to,$subject,$message,$headers);
+      $emailSent = "<div class='alert alert-success'><i class='icon-ok'></i> Message sent successfully! Thank you.</div>";
+    }
+  }
+  //cleans up data to prevent naughty abuse
+  function cleanInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+?>
 
-<!--<link rel="stylesheet" type="text/css" href="scripts/jqtransformplugin/jqtransform.css" />
-<link rel="stylesheet" type="text/css" href="scripts/formValidator/validationEngine.jquery.css" />
-<link rel="stylesheet" type="text/css" href="styling/contact.css" />-->
+<?php echo $emailSent;?>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/jqtransformplugin/jquery.jqtransform.js"></script>
-<script type="text/javascript" src="scripts/formValidator/jquery.validationEngine.js"></script>
-
-<script type="text/javascript" src="scripts/script.js"></script>
-
-</head>
-
-<body>
-
-<div id="main-container">
-
-  <div id="form-container">
-    <h1>Contact Me</h1>
-    <h2>Drop me a line and we will get back to you</h2>
-    
-    <form id="contact-form" name="contact-form" method="post" action="scripts/submit.php">
-      <table width="100%" border="0" cellspacing="0" cellpadding="5">
-        <tr>
-          <td width="15%"><label for="name">Name</label></td>
-          <td width="70%"><input type="text" class="validate[required,custom[onlyLetter]]" name="name" id="name" /></td>
-          <!-- value="<?=$_SESSION['post']['name']?>" -->
-          <td width="15%" id="errOffset">&nbsp;</td>
-        </tr>
-        <tr>
-          <td><label for="email">Email</label></td>
-          <td><input type="text" class="validate[required,custom[email]]" name="email" id="email" value="<?=$_SESSION['post']['email']?>" /></td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td><label for="subject">Subject</label></td>
-          <td><select name="subject" id="subject">
-            <option value="" selected="selected"> - Choose -</option>
-            <option value="Business proposal">Business Proposal</option>
-            <option value="Complaint">Complaint</option>
-            <option value="Inquiry">Inquiry</option>
-            <option value="Personal">Personal</option>
-          </select>          </td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td valign="top"><label for="message">Message</label></td>
-          <td><textarea name="message" id="message" class="validate[required]" cols="35" rows="5"><?=$_SESSION['post']['message']?></textarea></td>
-          <td valign="top">&nbsp;</td>
-        </tr>
-        <tr>
-          <td><label for="captcha"><?=$_SESSION['n1']?> + <?=$_SESSION['n2']?> =</label></td>
-          <td><input type="text" class="validate[required,custom[onlyNumber]]" name="captcha" id="captcha" /></td>
-          <td valign="top">&nbsp;</td>
-        </tr>
-        <tr>
-          <td valign="top">&nbsp;</td>
-          <td colspan="2"><input type="submit" name="button" id="button" value="Submit" />
-          <input type="reset" name="button2" id="button2" value="Reset" />
-          
-          <?=$str?>          <img id="loading" src="img/ajax-load.gif" width="16" height="16" alt="loading" /></td>
-        </tr>
-      </table>
-      </form>
-      <?=$success?>
+<form id="contact" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#contact" method="post">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="name">Your Name</label><?php echo $nameErr;?>
+      <input class="<?=(!empty($nameErr) ? ' error': '')?>" type="name" name="name" value="<?php if (isset($_POST['name'])){echo $_POST['name'];}?>" placeholder="First and last name" />
     </div>
-</div>
-
-</body>
-</html>
+    <div class="col-md-6">
+      <label for="email">Your Email</label><?php echo $fromErr;?>
+      <input class="<?=(!empty($fromErr) ? ' error': '')?>" type="email" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" placeholder="Email address" />
+    </div>
+  </div>
+  <label for="subject">Email Subject</label><?php echo $subjectErr;?>
+  <input class="<?=(!empty($subjectErr) ? ' error': '')?>" type="subject" name="subject" value="<?php if(isset($_POST['subject'])){echo $_POST['subject'];}?>" placeholder="Subject" />
+  <label for="message">Message</label><?php echo $messageErr;?>
+  <textarea class="<?=(!empty($messageErr) ? ' error': '')?>" name="message" rows="4" placeholder="Message"><?php if(isset($_POST['message'])){echo $_POST['message'];}?></textarea>
+  <button type="submit" id="submit" class="btn">Submit</button>
+</form>
