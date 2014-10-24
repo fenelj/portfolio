@@ -1,5 +1,5 @@
 <?php
-  $to = "me@ericcolon.com";
+  $to = "feneljoseph@knights.ucf.edu";
   $emailSent = $name = $from = $subject = $message = "";
   $nameErr = $fromErr = $subjectErr = $messageErr = "";
   $allClear = true;
@@ -22,7 +22,7 @@
     if (empty($_POST["subject"])) { 
       $allClear = false;
       $subjectErr = "<div class='alert alert-error'><i class='icon-remove'></i> Subject was empty or too short</div>"; 
-    } else { $subject = cleanInput($_POST["subject"]); }
+    } else { $subject = 'Webmail: '.cleanInput($_POST["subject"]); }
     if (empty($_POST["message"])) { 
       $allClear = false;
       $messageErr = "<div class='alert alert-error'><i class='icon-remove'></i> Message was empty or too short</div>"; 
