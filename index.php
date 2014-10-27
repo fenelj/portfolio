@@ -165,7 +165,7 @@
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<!--<script src="styling/jquery.min.js"></script>-->
-		<script type="text/javascript" src="scripts/index.js"></script>
+		 
 		<script type="text/javascript" src="scripts/gen_validatorv31.js"></script>
 		
 	</body>

@@ -56,19 +56,23 @@
 					Orlando, FL 32826</p>	
 				</div>
 
-				<div style = "text-align: left; width: 49%; float: right;">
+				<div style = "text-align: right; width: 49%; float: right;">
 					<h3>Permanent Address:</h3>
 					<p>3211 Jersey Court<br />
 					Fort Pierce, FL 34947</p>
 				</div>
 
-				<h3 style="float: left; clear: both;">Objective:&nbsp;&nbsp;</h3>
-					<p style="float: left; line-height: 1.75em;">To acquire apposition that will further prepare me for my desired career and further expand my professional experience.</p>
+				<h3 style="float: left; clear: both;">Personal Statement:&nbsp;&nbsp;</h3>
+					<p style="float: left; line-height: 1.75em;">To acquire a position that will further prepare
+					 me for my desired career and further expand my professional experience.</p>
 
 				<h3 style="clear: both; margin-bottom: 0;">Education</h3>
 					<p style="left-indent: 1em;">University of Central Florida<br />
 					Double Major: Bachelor of Science in Computer Engineering (CpE) &amp; Electrical Engineering (EE)<br />
 					Expected Graduation: Spring 2016</p>
+
+					<p style="left-indent: 1em;">Fort Pierce Central High School<br />
+					HS Diploma, Classs of 2012</p>
 
 				<h3 style="margin-bottom: 0;">Relavant Completed Coursework</h3>
 				<div style="width: 33%; float: left; text-align: left;">
@@ -92,7 +96,7 @@
 					Physics II for Engineers</p>
 				</div>
 
-				<h3 style="margin-bottom: 0; clear: both;">Experience/Volunteer Work</h3>
+				<h3 style="margin-bottom: 0; clear: both;">Experience</h3>
 
 				<div style="width: 85%; float: left; text-align: left;">
 					<p>UCF Center fo Distributed Learning | Web Applications Development Assistant (Techranger)<br />
@@ -100,14 +104,6 @@
 				</div>
 				<div style="width: 15%; float: left; text-align: left;">
 					<p>04/2014-Present</p>
-				</div>
-
-				<div style="width: 85%; float: left; text-align: left; clear: both;">
-					<p>Lowe's Home Improvement | Assembler (Seasonal)<br />
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Assemble a wide range of products to be sold in-store, or bought online.</i></p>
-				</div>
-				<div style="width: 15%; float: left; text-align: left;">
-					<p>02/2014-06/2014</p>
 				</div>
 
 				<div style="width: 85%; float: left; text-align: left; clear: both;">

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
   $to = "feneljoseph@knights.ucf.edu";
   $emailSent = $name = $from = $subject = $message = "";
@@ -29,7 +31,7 @@
     } else { $message = cleanInput($_POST["message"]); }
     //if there are no error flags then send the email
     if ($allClear == true) {
-      $headers = "From: '$name' <$from>";
+      $headers = "From: ".$name." <".$from.">";
       mail($to,$subject,$message,$headers);
       $emailSent = "<div class='alert alert-success'><i class='icon-ok'></i> Message sent successfully! Thank you.</div>";
     }
@@ -62,3 +64,5 @@
   <textarea class="<?=(!empty($messageErr) ? ' error': '')?>" name="message" rows="4" placeholder="Message"><?php if(isset($_POST['message'])){echo $_POST['message'];}?></textarea>
   <button type="submit" id="submit" class="btn">Submit</button>
 </form>
+
+<script type="text/javascript" src="scripts/contact.js"></script>
