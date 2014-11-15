@@ -100,7 +100,7 @@ div .right {
 
 #header {
 	margin: 0 auto;
-	
+	height: 100%;
 	position: relative;
 	top: 30px;
 	width: 100%;
