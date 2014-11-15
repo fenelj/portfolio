@@ -10,7 +10,7 @@ var intVal2;
 var element1;
 var element2;
 
-$("#header").attr('style', "height: " + (winHeight - 30) + "px; width: " + winWidth + "px;");
+$("#header").attr('style', "height: " + (winHeight - 55) + "px; width: " + winWidth + "px;");
 $('#content_bio').attr('style', "min-height: " + (winHeight - 75) + "px;");
 $('#content_more').attr('style', "min-height: " + (winHeight - 75) + "px;");
 $('#content_contact').attr('style', "min-height: " + (winHeight - 165) + "px;");
