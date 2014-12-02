@@ -97,7 +97,7 @@
 						 programmer, finally to what I have come into realization now, I just like creating.</p>
 
 						<p>"Creating what?", you may ask. Creating not just the next big thing big but rather things that
-						 will improve people's lives.</p>
+						 will improve people's lives for the better.</p>
 
 						<h3 id="content_bio_expansion2" class="content_bio_expansion" value="2">Even More&nbsp;&nbsp;<i class="fa fa-plus-square-o fa-1x"></i></h3>
 						<div id="content_bio_expansion2_text">
@@ -108,14 +108,14 @@
 							 surpasses what I have done. I hope to mold the minds of others with my mannerisms while I myself
 							 be impressed by the marvels of my peers.</p>
 
-							<p>I am an un-talented musician &amp; a music lover that has not quite developed an ear of my own.</p>
+							<p>I am an un-talented musician &amp; a music lover that has not quite developed an ear of my own. A
+							philosopher without a real doctrine of my own.</p>
 
 							<h3 id="content_bio_expansion3" class="content_bio_expansion" value="3">Even, Even More&nbsp;&nbsp;<i class="fa fa-plus-square-o fa-1x"></i></h3>
 							<div id="content_bio_expansion3_text">
 								<p>Still want more?!</p>
 								
-								<p>Go ahead and click <i class="fa fa-envelope-o fa-1x"></i> icon to the North-East region of the page to find out how to reach me,
-								 or you can fill out the form and I&#39;ll get back to you. (Please don&#39;t SPAM me)</p>
+								<p>Go ahead and email <span style="text-decoration: underline;">fenel.joseph06@gmail.com</span> or scroll down to the lower region of the page to fill out the form and I&#39;ll get back to you asap. (Please don&#39;t SPAM me)</p>
 								
 								
 							</div>

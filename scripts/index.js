@@ -55,9 +55,9 @@ $(window).on('resize', function () {
 	winWidth = $(window).width();
 
 	$("#header").attr('style', "height: " + (winHeight - 55) + "px; width: " + winWidth + "px;");
-	$('#content_bio').attr('style', "min-height: " + (winHeight - 95) + "px;");
-	$('#content_more').attr('style', "min-height: " + (winHeight - 95) + "px;");
-	$('#content_contact').attr('style', "min-height: " + (winHeight - 220) + "px;");
+	$('#content_bio').attr('style', "min-height: " + (winHeight - 155) + "px;");
+	$('#content_more').attr('style', "min-height: " + (winHeight - 155) + "px;");
+	$('#content_contact').attr('style', "min-height: " + (winHeight - 280) + "px;");
 });
 
 // content_bio_expansion
@@ -231,7 +231,7 @@ function pageAdjust (position) {
 	var styling = "background: #282828; -moz-box-shadow: inset 0 0 25px rgba(0,0,0,0.5); -webkit-box-shadow: inset 0 0 25px rgba(0,0,0,0.5); max-height: 175px; min-height: 100px; box-shadow: inset 0 0 25px rgba(0,0,0,0.5); color: #FFF; margin: 0; position: relative; text-align: center; width: 100%; "
 
 	if ( position > 0 &&  (position - ($("#content_bio_title").offset().top)) < 0 ) {
-		var addHeight = Math.floor( ($("#content_bio_title").offset().top/position - 1)*50 );
+		var addHeight = Math.floor( ($("#content_bio_title").offset().top/position - 1)*35 );
 
 		if ( (addHeight + 100) < 175 ) {
 			$("#content_bio_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px; top: 5px;");
@@ -241,7 +241,7 @@ function pageAdjust (position) {
 	}
 
 	if ( position > 0 &&  (position - ($("#content_more_title").offset().top)) < 0 ) {
-		var addHeight = Math.floor( (($("#content_more_title").offset().top - $(window).height())/(position - $(window).height()) - 1)*50 );
+		var addHeight = Math.floor( (($("#content_more_title").offset().top - $(window).height())/(position - $(window).height()) - 1)*35 );
 
 		if ( (addHeight + 100) < 175 ) {
 			$("#content_more_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px;");
@@ -251,7 +251,7 @@ function pageAdjust (position) {
 	}
 
 	if ( position > 0 &&  (position - ($("#content_contact_title").offset().top)) < 0 ) {
-		var addHeight = Math.floor( (($("#content_contact_title").offset().top - $(window).height()*2)/(position - $(window).height()*2) - 1)*50 );
+		var addHeight = Math.floor( (($("#content_contact_title").offset().top - $(window).height()*2)/(position - $(window).height()*2) - 1)*35 );
 
 		if ( (addHeight + 100) < 175 ) {
 			$("#content_contact_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px;");

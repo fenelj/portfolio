@@ -66,18 +66,24 @@ div .right {
 	-webkit-box-shadow: inset 0 0 25px rgba(0,0,0,0.5);
 	box-shadow:         inset 0 0 25px rgba(0,0,0,0.5);
 
+	text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
+
 	color: #FFF;
 	height: 175px;
 	line-height: 175px;
 	margin: 0;
 	position: relative;
 	text-align: center;
+	text-outline: 2px 2px #282828;
 	width: 100%;
 }
 
 #content #titleDecor {	
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	text-shadow: none;
+
 }
 
 #content_bio, #content_more, #content_contact {
