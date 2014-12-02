@@ -1,3 +1,5 @@
+$("#titleHomeIcon").hide();
+
 var winHeight = $(window).height();
 var winWidth = $(window).width();
 
@@ -11,9 +13,9 @@ var element1;
 var element2;
 
 $("#header").attr('style', "height: " + (winHeight - 55) + "px; width: " + winWidth + "px;");
-$('#content_bio').attr('style', "min-height: " + (winHeight - 75) + "px;");
-$('#content_more').attr('style', "min-height: " + (winHeight - 75) + "px;");
-$('#content_contact').attr('style', "min-height: " + (winHeight - 165) + "px;");
+$('#content_bio').attr('style', "min-height: " + (winHeight - 155) + "px;");
+$('#content_more').attr('style', "min-height: " + (winHeight - 155) + "px;");
+$('#content_contact').attr('style', "min-height: " + (winHeight - 280) + "px;");
 
 var cwChoices = [["#fff100", "#ffd400", "#fcb514", "#f7951d", "#f37520", "#f15423", "#ee1d25", "#ee1c2e", "#ee1a3b",
 			"#ed1749", "#ed145b", "#ec0a70", "#ec008c", "#91268f", "#92268f", "#732b90", "#5d2d91", "#463092",
@@ -52,10 +54,10 @@ $(window).on('resize', function () {
 	winHeight = $(window).height();
 	winWidth = $(window).width();
 
-	$("#header").attr('style', "height: " + (winHeight - 30) + "px; width: " + winWidth + "px;");
-	$('#content_bio').attr('style', "min-height: " + (winHeight - 75) + "px;");
-	$('#content_more').attr('style', "min-height: " + (winHeight - 75) + "px;");
-	$('#content_contact').attr('style', "min-height: " + (winHeight - 165) + "px;");
+	$("#header").attr('style', "height: " + (winHeight - 55) + "px; width: " + winWidth + "px;");
+	$('#content_bio').attr('style', "min-height: " + (winHeight - 95) + "px;");
+	$('#content_more').attr('style', "min-height: " + (winHeight - 95) + "px;");
+	$('#content_contact').attr('style', "min-height: " + (winHeight - 220) + "px;");
 });
 
 // content_bio_expansion
@@ -74,12 +76,11 @@ $(".modalClose").on('click', function () {
 	$("#navBar_quote").attr('view', "false");
 });
 
-// starts colorWheel1
+// shows home icon
 $("#navBar_title").mouseenter(function () {
 
-	element1 = $("#titleDecor");
+	$("#titleHomeIcon").fadeIn();
 
-	intVal1 = setInterval(colorWheel1, 50);
 });
 
 // starts colorWheel2
@@ -90,12 +91,17 @@ $(".navBar_tab_item").mouseenter(function () {
 	intVal2 = setInterval(colorWheel2, 50);
 });
 
-// stops colorWheel1
+// starts colorWheel1
+$("#content_bio_title").mouseenter(function () {
+	element1 = $("#titleDecor");
+
+	intVal1 = setInterval(colorWheel1, 50);
+})
+
+// hides home icon
 $("#navBar_title").mouseleave(function () {
 
-	clearInterval( intVal1 );
-
-	// $(element1).attr('style', 'none');
+	$("#titleHomeIcon").fadeOut();
 
 });
 
@@ -110,6 +116,13 @@ $(".navBar_tab_item").mouseleave(function () {
 		$(element2).css({'background':'#282828'});
 	}
 });
+
+// stops colorWheel1
+$("#content_bio_title").mouseleave(function () {
+	clearInterval( intVal1 );
+
+	// $(element1).attr('style', 'none');
+})
 
 $("#navBar_title").on('click', function () {
 
@@ -160,7 +173,7 @@ $(".navBar_tab_item").on('click', function () {
 function adjustImage (POP) {
 	var width;
 
-	var contentBio = $("#content_bio").offset().top + 50;
+	var contentBio = $("#content_bio").offset().top;
 	var contentMore = $("#content_more").offset().top + 50;
 	var contentContact = $("#content_contact").offset().top + 50;
 
@@ -169,8 +182,7 @@ function adjustImage (POP) {
 	
 	} else if ( POP > contentBio && POP < contentMore ) {
 		width = $('#content_bio_right_pic').width();
-		console.log("width: " + width);
-		$("#content_bio_right_pic").attr('style',"position: fixed; top: 120px; width: " + width + "px; height: auto;");
+		$("#content_bio_right_pic").attr('style',"position: fixed; top: 100px; width: " + width + "px; height: auto;");
 	
 	} else if ( POP > contentMore && POP < contentContact ) {
 		$("#content_bio_right_pic").attr('style','');
@@ -215,6 +227,38 @@ function pageAdjust (position) {
 	var i, j, k;
 	var tabs = $("#navBar_tab").find("li");
 	height = (winHeight > 768)? winHeight: 768;
+
+	var styling = "background: #282828; -moz-box-shadow: inset 0 0 25px rgba(0,0,0,0.5); -webkit-box-shadow: inset 0 0 25px rgba(0,0,0,0.5); max-height: 175px; min-height: 100px; box-shadow: inset 0 0 25px rgba(0,0,0,0.5); color: #FFF; margin: 0; position: relative; text-align: center; width: 100%; "
+
+	if ( position > 0 &&  (position - ($("#content_bio_title").offset().top)) < 0 ) {
+		var addHeight = Math.floor( ($("#content_bio_title").offset().top/position - 1)*50 );
+
+		if ( (addHeight + 100) < 175 ) {
+			$("#content_bio_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px; top: 5px;");
+		} else {
+			$("#content_bio_title").attr('style', styling + "height: 175px; line-height: 175px; top: 5px;");
+		}
+	}
+
+	if ( position > 0 &&  (position - ($("#content_more_title").offset().top)) < 0 ) {
+		var addHeight = Math.floor( (($("#content_more_title").offset().top - $(window).height())/(position - $(window).height()) - 1)*50 );
+
+		if ( (addHeight + 100) < 175 ) {
+			$("#content_more_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px;");
+		} else {
+			$("#content_more_title").attr('style', styling + "height: 175px; line-height: 175px;");
+		}
+	}
+
+	if ( position > 0 &&  (position - ($("#content_contact_title").offset().top)) < 0 ) {
+		var addHeight = Math.floor( (($("#content_contact_title").offset().top - $(window).height()*2)/(position - $(window).height()*2) - 1)*50 );
+
+		if ( (addHeight + 100) < 175 ) {
+			$("#content_contact_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px;");
+		} else {
+			$("#content_contact_title").attr('style', styling + "height: 175px; line-height: 175px;");
+		}
+	}
 
 	if ( position < ($("#content_bio").offset().top - 350) ) {
 		for (i = 0; i < tabs.length; i++) {
@@ -271,18 +315,18 @@ function scrollTo (level) {
 			break;
 
 		case "2":
-			position = $("#content_bio").offset().top;
-			$("html, body").animate({ scrollTop: (position - 75) }, 1000);
+			position = $("#content_bio_title").offset().top;
+			$("html, body").animate({ scrollTop: (position - 55) }, 1000);
 			break;
 
 		case "3":
-			position = $("#content_more").offset().top;
-			$("html, body").animate({ scrollTop: (position - 75) }, 1000);
+			position = $("#content_more_title").offset().top;
+			$("html, body").animate({ scrollTop: (position - 55) }, 1000);
 			break;
 
 		case "4":
-			position = $("#content_contact").offset().top;
-			$("html, body").animate({ scrollTop: (position - 75) }, 1000);
+			position = $("#content_contact_title").offset().top;
+			$("html, body").animate({ scrollTop: (position - 55) }, 1000);
 			break;
 
 		default:

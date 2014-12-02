@@ -1,34 +1,60 @@
 form#contact label {
   display: inline-block;
-  font-size: 1.2em;
-  margin-bottom: 9px;
+  font-size: 1em;
+  margin-bottom: 5px;
 }
+
 form#contact .alert {
   display: inline-block;
-  margin-left: 9px;
+  margin-left: 5px;
 }
+
 form#contact input {
   border: 1px solid #b8b8b8;
   display: block;
-  margin: 0 0 9px;
-  padding: 12px;
-  width: 100%;
+  font-size: .75em;
+  margin: 0 0 5px;
+  padding: 10px;
+  width: calc(100% - 20px);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+
 form#contact textarea {
   border: 1px solid #b8b8b8;
-  margin: 0 0 18px 0;
-  padding: 12px;
+  font-size: .75em;
+  margin: 0 0 15px 0;
+  padding: 10px;
   resize: vertical;
-  width: 100%;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  width: calc(100% - 20px);
+
+  -webkit-border-radius: 2.5px;
+  -moz-border-radius: 2.5px;
+  border-radius: 2.5px;
 }
+
 form#contact .error {
   border-color: #8d2121;
 }
+
+form#contact .errorMessage {
+  color: #8d2121;
+  font-size: .75em;
+  line-height: 1em;
+}
+
 form#contact #sender-info {
-  width: 50%;
+  width: 100%;
+}
+
+form#contact #submit {
+  display: block;
+  font-size: .75em;
+  margin: 0 0 5px;
+  padding: 10px;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

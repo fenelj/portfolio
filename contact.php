@@ -51,18 +51,22 @@
   <div class="row">
     <div class="col-md-6">
       <label for="name">Your Name</label><?php echo $nameErr;?>
-      <input class="<?=(!empty($nameErr) ? ' error': '')?>" type="name" name="name" value="<?php if (isset($_POST['name'])){echo $_POST['name'];}?>" placeholder="First and last name" />
+      <input class="<?=(!empty($nameErr) ? ' error': '')?>" type="name" name="name" value="<?php if (isset($_POST['name'])){echo $_POST['name'];}?>" placeholder="First &amp; Last" />
     </div>
     <div class="col-md-6">
       <label for="email">Your Email</label><?php echo $fromErr;?>
-      <input class="<?=(!empty($fromErr) ? ' error': '')?>" type="email" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" placeholder="Email address" />
+      <input class="<?=(!empty($fromErr) ? ' error': '')?>" type="email" name="email" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>" placeholder="Example: username@gmail.com" />
     </div>
   </div>
   <label for="subject">Email Subject</label><?php echo $subjectErr;?>
   <input class="<?=(!empty($subjectErr) ? ' error': '')?>" type="subject" name="subject" value="<?php if(isset($_POST['subject'])){echo $_POST['subject'];}?>" placeholder="Subject" />
   <label for="message">Message</label><?php echo $messageErr;?>
   <textarea class="<?=(!empty($messageErr) ? ' error': '')?>" name="message" rows="4" placeholder="Message"><?php if(isset($_POST['message'])){echo $_POST['message'];}?></textarea>
-  <button type="submit" id="submit" class="btn">Submit</button>
+  <button type="submit" id="submit" class="btn center">Submit</button>
 </form>
 
 <script type="text/javascript" src="scripts/contact.js"></script>
+<link rel="stylesheet" type="text/css" href="styling/contact.css" />
+
+
+

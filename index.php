@@ -11,11 +11,9 @@
 		<meta property="og:description" content="Online portfolio of UCF student Fenel Joseph. Check it out.">
 		<meta property="og:image" content="http://tux.cdl.ucf.edu/~fe805415/portfolio/images/fenel.png">
 
-		<title>My Life In Color - Fenel Joseph</title>
+		<title>Fenel Joseph - MyLifeInColor</title>
 
-		<link rel="stylesheet" media="(min-width: 1024px)" type="text/css" href="styling/stylesheet-desktop.css" />
-		<link rel="stylesheet" media="(min-width: 840px; max-width: 1023px)" type="text/css" href="styling/stylesheet-desktop.css" />
-		<link rel="stylesheet" media="(max-width: 839px)" type="text/css" href="styling/stylesheet-desktop.css" />
+		<link rel="stylesheet" type="text/css" href="styling/stylesheet.css" />
 
 		<link rel="stylesheet" type="text/css" href="styling/bio.css" />
 
@@ -30,7 +28,9 @@
 		<div id="navBar">
 
 			<div>
-				<div id="navBar_title">MyLife.<span id="titleDecor">inColor</span>(FJ)</div>
+				<div id="navBar_title">
+					Fenel Joseph&nbsp;&nbsp;&nbsp;<span id="titleHomeIcon"><i class="fa fa-home fa-1g"></i></span>
+				</div>
 				
 				<ul id="navBar_tab">
 					<li class="navBar_tab_item" value="2" view="false">Bio
@@ -47,7 +47,7 @@
 					</li>
 				</ul>
 
-				<a id="navBar_quote" class="navBar_tab_item" href="#modalQuote" alt="Get A Quote" title="Get A Quote" value="5" view="false">
+				<a id="navBar_quote" class="navBar_tab_item" href="#GetAQuote" alt="Get A Quote" title="Get A Quote" value="5" view="false">
 					<i class="fa fa-pencil-square-o fa-2x"></i>
 					<div></div>
 				</a>
@@ -60,8 +60,10 @@
 
 		<div id="content">
 
+			<h1 id="content_bio_title" style="top: 5px;" id="MyLifeInColor">MyLife.<span id="titleDecor">inColor</span>(FJ)</h1>
+
 			<div id="content_bio">
-				<h2>BIO</h2>
+				<!-- <h2>BIO</h2> -->
 
 				<div id="content_bio_right">
 					<div>
@@ -127,8 +129,8 @@
 
 			</div>
 
+			<h1 id="content_more_title">MORE</h1>
 			<div id="content_more">
-				<h2>MORE</h2>
 				
 				<div>
 					<p>I plan to create a blog. Look out for that.</p>
@@ -136,15 +138,11 @@
 				
 			</div>
 
+			<h1 id="content_contact_title">CONTACT</h1>
 			<div id="content_contact">
-				<h2>CONTACT</h2>
 				
-				<div class="left">
+				<div class="center" id="contactForm">
 					<?php include 'contact.php' ?>
-				</div>
-
-				<div class="right">
-				    
 				</div>
 				
 			</div>
@@ -153,7 +151,7 @@
 
 		<?php include 'footer.html' ?>
 
-		<div id = "modalQuote" class = "modal">
+		<div id = "GetAQuote" class = "modal">
 
 			<div>
 			<a href="#close" class="modalClose" alt="Close" title="Close" class="modalClose">X</a>	
