@@ -2,12 +2,23 @@
 
 <html lang="en">
 	<head>
-		<title>My Life In Color - Fenel Joseph</title>
-		<link rel="stylesheet" media="(min-width: 1024px)" type="text/css" href="styling/desktop-cv.css" />
-		<link rel="stylesheet" media="(min-width: 840px; max-width: 1023px)" type="text/css" href="tablet-cv.css" />
-		<link rel="stylesheet" media="(max-width: 839px)" type="text/css" href="styling/mobile-cv.css" />
+
+		<meta charset="utf-8">
+		<meta name="description" content="Online portfolio of UCF student Fenel Joseph. Check it out.">
+		<meta name="author" content="Fenel Joseph">
+		<meta property="og:site_name" content="My Life in Color: Fenel Joseph" >
+		<meta property="og:url" content="http://feneljoseph.com">
+		<meta property="og:description" content="Online portfolio of UCF student Fenel Joseph. Check it out.">
+		<meta property="og:image" content="http://tux.cdl.ucf.edu/~fe805415/portfolio/images/fenel.png">
+
+		<title>Fenel Joseph - CV</title>
+
+		<link rel="stylesheet" type="text/css" href="styling/cv.css" />
+
 
 		<link rel="icon" type="ico" href="images/favicon.ico">
+
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		
 	</head>
 
@@ -16,24 +27,26 @@
 		<div id="navBar">
 
 			<div>
-				<div id="navBar_title">MyLife.<span id="titleDecor">inColor</span>(FJ)</div>
+				<div id="navBar_title">
+					Fenel Joseph&nbsp;&nbsp;&nbsp;<span id="titleHomeIcon"><i class="fa fa-home fa-1g"></i></span>
+				</div>
 				
 				<ul id="navBar_tab">
 					<li class="navBar_tab_item" value="2" view="false">Bio
 						<div></div>
 					</li><!--
-					--><li class="navBar_tab_item" value="3" view="false">More
+					--><li class="navBar_tab_item" value="3" view="false">Work
 						<div></div>
 					</li><!--
 					--><li class="navBar_tab_item" value="4" view="false">Contact
 						<div></div>
 					</li><!--
-					--><li class="navBar_tab_item" value="1" view="true">CV
+					--><li class="navBar_tab_item" value="1" view="false">CV
 						<div></div>
 					</li>
 				</ul>
 
-				<a id="navBar_quote" class="navBar_tab_item" href="#modalQuote" alt="Get A Quote" title="Get A Quote" value="5" view="false">
+				<a id="navBar_quote" class="navBar_tab_item" href="#GetAQuote" alt="Get A Quote" title="Get A Quote" value="5" view="false">
 					<i class="fa fa-pencil-square-o fa-2x"></i>
 					<div></div>
 				</a>
@@ -159,7 +172,7 @@
 
 		<?php include('footer.html'); ?>
 
-		<div id = "modalQuote" class = "modal">
+		<div id = "GetAQuote" class = "modal">
 
 			<div>
 			<a href="#close" class="modalClose" alt="Close" title="Close" class="modalClose">X</a>	
@@ -170,8 +183,7 @@
 		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<!--<script src="styling/jquery.min.js"></script>-->
-		<script type="text/javascript" src="styling/cv.js"></script>
+		<script type="text/javascript" src="scripts/cv.js"></script>
 	</body>
 
 

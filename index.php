@@ -15,8 +15,6 @@
 
 		<link rel="stylesheet" type="text/css" href="styling/stylesheet.css" />
 
-		<link rel="stylesheet" type="text/css" href="styling/bio.css" />
-
 		<link rel="icon" type="ico" href="images/favicon.ico">
 
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -36,7 +34,7 @@
 					<li class="navBar_tab_item" value="2" view="false">Bio
 						<div></div>
 					</li><!--
-					--><li class="navBar_tab_item" value="3" view="false">More
+					--><li class="navBar_tab_item" value="3" view="false">Work
 						<div></div>
 					</li><!--
 					--><li class="navBar_tab_item" value="4" view="false">Contact
@@ -58,10 +56,10 @@
 			<?php include 'header.html' ?>
 		</div>
 
+		
 		<div id="content">
 
-			<h1 id="content_bio_title" style="top: 5px;" id="MyLifeInColor">MyLife.<span id="titleDecor">inColor</span>(FJ)</h1>
-
+			<h1 id="content_bio_title" style="top: 5px;" id="MyLifeInColor">MyLife.<span id="titleDecor">inColor</span>()</h1>
 			<div id="content_bio">
 				<!-- <h2>BIO</h2> -->
 
@@ -71,13 +69,13 @@
 					</div>
 				</div>
 
-				<div id="content_bio_left">
+				<div style="overflow: none;" id="content_bio_left">
 					<p>First off, I thank you for visiting my site. I&#39;ve created this site to log projects and
 					 what&#39;s current in my life.</p>
 
 					<h3>Who Am I?</h3>
 					<p>I am a third-year undergraduate student matriculating at the University of Central Florida,
-					 in Orlando, Fl, currently majoring in Computer Engineering as well as Electrical Engineering.
+					 in Orlando, Fl, currently double majoring in Computer Engineering as well as Electrical Engineering.
 					 I intend to complete my undergraduate coursework (GRADUATE!!) by May 2016. </p> 
 
 					<p>With all that I am learning while in school, I hope to contribute to this technology-enabled
@@ -96,7 +94,7 @@
 						 options which went from pharmacist, then bridge builder, followed by architect, proceded by computer
 						 programmer, finally to what I have come into realization now, I just like creating.</p>
 
-						<p>"Creating what?", you may ask. Creating not just the next big thing big but rather things that
+						<p>"Creating what?", you may ask. Creating world altering anomalies, not just the next big thing, but rather things that
 						 will improve people's lives for the better.</p>
 
 						<h3 id="content_bio_expansion2" class="content_bio_expansion" value="2">Even More&nbsp;&nbsp;<i class="fa fa-plus-square-o fa-1x"></i></h3>
@@ -109,13 +107,15 @@
 							 be impressed by the marvels of my peers.</p>
 
 							<p>I am an un-talented musician &amp; a music lover that has not quite developed an ear of my own. A
-							philosopher without a real doctrine of my own.</p>
+							philosopher without a real doctrine of my own. I'm an anomaly, the only me.</p>
 
 							<h3 id="content_bio_expansion3" class="content_bio_expansion" value="3">Even, Even More&nbsp;&nbsp;<i class="fa fa-plus-square-o fa-1x"></i></h3>
 							<div id="content_bio_expansion3_text">
 								<p>Still want more?!</p>
 								
-								<p>Go ahead and email <span style="text-decoration: underline;">fenel.joseph06@gmail.com</span> or scroll down to the lower region of the page to fill out the form and I&#39;ll get back to you asap. (Please don&#39;t SPAM me)</p>
+								<p>Go ahead and email <span style="text-decoration: underline;">fenel.joseph06@gmail.com</span> 
+								or scroll down to the lower region of this page to fill out the form and I&#39;ll get back to you 
+								asap. (Please don&#39;t SPAM me)</p>
 								
 								
 							</div>
@@ -129,11 +129,11 @@
 
 			</div>
 
-			<h1 id="content_more_title">MORE</h1>
-			<div id="content_more">
+			<h1 id="content_work_title">WORK</h1>
+			<div id="content_work">
 				
 				<div>
-					<p>I plan to create a blog. Look out for that.</p>
+					<p>Nothing here yet, come back later.</p>
 				</div>
 				
 			</div>

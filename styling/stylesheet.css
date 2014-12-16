@@ -86,13 +86,13 @@ div .right {
 
 }
 
-#content_bio, #content_more, #content_contact {
+#content_bio, #content_work, #content_contact {
 	clear: both;
 	padding-top: 20px;
 	position: inherit;
 }
 
-#content_more > div, #content_contact > div {
+#content_work > div, #content_contact > div {
 	height: inherit;
 	padding: 0 30px 30px 30px;
 }
@@ -100,7 +100,7 @@ div .right {
 #content_bio_left {
 	border-right: 2px solid black;
 	float: left;
-	height: inherit;
+	height: 100%;
 	margin-bottom: 20px;
 	padding: 0 1.5em 2em 2em;
 
@@ -134,6 +134,18 @@ div .right {
 
 	height: auto;
 	width: auto;
+}
+
+#content_bio {
+	text-align: justify;
+}
+
+.content_bio_expansion {
+	cursor: pointer;
+}
+
+#content_bio_expansion1_text, #content_bio_expansion2_text, #content_bio_expansion3_text {
+	display: none;
 }
 
 #content_contact #contactForm {
@@ -301,3 +313,4 @@ div .right {
 #navBar #navBar_tab {
 	list-style-type: none;
 }
+

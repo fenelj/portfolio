@@ -11,10 +11,11 @@ var intVal1;
 var intVal2;
 var element1;
 var element2;
+var preLevel = 0
 
 $("#header").attr('style', "height: " + (winHeight - 55) + "px; width: " + winWidth + "px;");
 $('#content_bio').attr('style', "min-height: " + (winHeight - 155) + "px;");
-$('#content_more').attr('style', "min-height: " + (winHeight - 155) + "px;");
+$('#content_work').attr('style', "min-height: " + (winHeight - 155) + "px;");
 $('#content_contact').attr('style', "min-height: " + (winHeight - 280) + "px;");
 
 var cwChoices = [["#fff100", "#ffd400", "#fcb514", "#f7951d", "#f37520", "#f15423", "#ee1d25", "#ee1c2e", "#ee1a3b",
@@ -41,6 +42,25 @@ $("#titleDecor").css({'background-image':"-webkit-linear-gradient(to right, " + 
 $("#titleDecor").css({'background-image':"-o-linear-gradient(to right, " + cw[increment1[0]] + c + cw[increment1[1]] + c + cw[increment1[2]] + c + cw[increment1[3]] + c + cw[increment1[4]] + c + cw[increment1[5]] + c + cw[increment1[6]]});
 $("#titleDecor").css({'background-image':"-moz-linear-gradient(to right, " + cw[increment1[0]] + c + cw[increment1[1]] + c + cw[increment1[2]] + c + cw[increment1[3]] + c + cw[increment1[4]] + c + cw[increment1[5]] + c + cw[increment1[6]]});
 
+// detects when window has loaded
+$(window).on('load', function () {
+	var currURL = document.URL;
+
+	if ( endsWith(currURL, '#bio') ) {
+		setTimeout( function () {
+			scrollTo("2");
+		}, 500);
+	} else if ( endsWith(currURL, '#work') ) {
+		setTimeout( function () {
+			scrollTo("3");
+		}, 500);
+	} else if ( endsWith(currURL, '#contact') ) {
+		setTimeout( function () {
+			scrollTo("4");
+		}, 500);
+	}
+});
+
 // detects window scrolling
 $(window).on('scroll', function () {
 	pageAdjust( $(this).scrollTop() );
@@ -55,8 +75,8 @@ $(window).on('resize', function () {
 	winWidth = $(window).width();
 
 	$("#header").attr('style', "height: " + (winHeight - 55) + "px; width: " + winWidth + "px;");
-	$('#content_bio').attr('style', "min-height: " + (winHeight - 155) + "px;");
-	$('#content_more').attr('style', "min-height: " + (winHeight - 155) + "px;");
+	$('#content_bio').attr('style', "min-height: " + (winHeight - 170) + "px;");
+	$('#content_work').attr('style', "min-height: " + (winHeight - 170) + "px;");
 	$('#content_contact').attr('style', "min-height: " + (winHeight - 280) + "px;");
 });
 
@@ -174,17 +194,17 @@ function adjustImage (POP) {
 	var width;
 
 	var contentBio = $("#content_bio").offset().top;
-	var contentMore = $("#content_more").offset().top + 50;
+	var contentWork = $("#content_work").offset().top + 50;
 	var contentContact = $("#content_contact").offset().top + 50;
 
 	if ( POP <= contentBio ) {
 		$("#content_bio_right_pic").attr('style','');
 	
-	} else if ( POP > contentBio && POP < contentMore ) {
+	} else if ( POP > contentBio && POP < contentWork ) {
 		width = $('#content_bio_right_pic').width();
 		$("#content_bio_right_pic").attr('style',"position: fixed; top: 100px; width: " + width + "px; height: auto;");
 	
-	} else if ( POP > contentMore && POP < contentContact ) {
+	} else if ( POP > contentWork && POP < contentContact ) {
 		$("#content_bio_right_pic").attr('style','');
 	
 	} else {
@@ -223,6 +243,10 @@ function colorWheel2 () {
 	}
 }
 
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
 function pageAdjust (position) {
 	var i, j, k;
 	var tabs = $("#navBar_tab").find("li");
@@ -240,13 +264,13 @@ function pageAdjust (position) {
 		}
 	}
 
-	if ( position > 0 &&  (position - ($("#content_more_title").offset().top)) < 0 ) {
-		var addHeight = Math.floor( (($("#content_more_title").offset().top - $(window).height())/(position - $(window).height()) - 1)*35 );
+	if ( position > 0 &&  (position - ($("#content_work_title").offset().top)) < 0 ) {
+		var addHeight = Math.floor( (($("#content_work_title").offset().top - $(window).height())/(position - $(window).height()) - 1)*35 );
 
 		if ( (addHeight + 100) < 175 ) {
-			$("#content_more_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px;");
+			$("#content_work_title").attr('style', styling + "height: " + (100 + addHeight) + "px; line-height: " + (115 + addHeight) + "px;");
 		} else {
-			$("#content_more_title").attr('style', styling + "height: 175px; line-height: 175px;");
+			$("#content_work_title").attr('style', styling + "height: 175px; line-height: 175px;");
 		}
 	}
 
@@ -261,12 +285,18 @@ function pageAdjust (position) {
 	}
 
 	if ( position < ($("#content_bio").offset().top - 350) ) {
+
+		window.location.replace('#bio');
+
 		for (i = 0; i < tabs.length; i++) {
 			$(tabs[i]).attr('view',"false");
 			$(tabs[i]).find("div").attr('style', 'none');
 		}
 
-	} else if ( position < ($("#content_more").offset().top - 350) ) {
+	} else if ( position < ($("#content_work").offset().top - 350) ) {
+
+		window.location.replace('#work');
+
 		for (i = 0; i < tabs.length; i++) {
 			$(tabs[i]).attr('view',"false");
 			$(tabs[i]).find("div").attr('style', 'none');
@@ -280,6 +310,9 @@ function pageAdjust (position) {
 		}
 
 	} else if ( position < ($("#content_contact").offset().top - 350) ) {
+
+		window.location.replace('#bio');
+
 		for (i = 0; i < tabs.length; i++) {
 			$(tabs[i]).attr('view',"false");
 			$(tabs[i]).find("div").attr('style', 'none');
@@ -308,25 +341,39 @@ function pageAdjust (position) {
 
 function scrollTo (level) {
 	var position;
+	var displacement;
+	var lag
+
+	displacement = preLevel - level;
+
+	if (displacement < -2 || displacement > 2) {
+		lag = 2;
+	} else {
+		lag = 1;
+	}
 
 	switch (level) {
 		case "1":
-			$("html, body").animate({ scrollTop: 0 }, 1000);
+			preLevel = level;
+			$("html, body").animate({ scrollTop: 0 }, 1000*lag);
 			break;
 
 		case "2":
+			preLevel = level;
 			position = $("#content_bio_title").offset().top;
-			$("html, body").animate({ scrollTop: (position - 55) }, 1000);
+			$("html, body").animate({ scrollTop: (position - 55) }, 1000*lag);
 			break;
 
 		case "3":
-			position = $("#content_more_title").offset().top;
-			$("html, body").animate({ scrollTop: (position - 55) }, 1000);
+			preLevel = level;
+			position = $("#content_work_title").offset().top;
+			$("html, body").animate({ scrollTop: (position - 55) }, 1000*lag);
 			break;
 
 		case "4":
+			preLevel = level;
 			position = $("#content_contact_title").offset().top;
-			$("html, body").animate({ scrollTop: (position - 55) }, 1000);
+			$("html, body").animate({ scrollTop: (position - 55) }, 1000*lag);
 			break;
 
 		default:

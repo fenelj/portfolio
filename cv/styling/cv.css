@@ -1,16 +1,16 @@
 body {
-	background: #CCC;
+	background: #282828;
+	color: #282828;
 	font-family: "Arial";
+	margin: 0;
 	overflow-x: hidden;
 	padding: 0;
-	margin: 0;
 }
-
 #content {
-	background: rgba(255,255,255,0.95);
+	background: rgba(255,255,255,0.99);
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	position: relative;
-	margin: 0 auto 100px auto;
+	margin: 0 auto;
 	max-width: 1200px;
 	min-width: 1024px;
 	top: 75px;
@@ -67,7 +67,7 @@ body {
 	color: #151515;
 }
 
-#modalQuote > div {
+#GetAQuote > div {
 	background: #303030;
 
 	border-bottom: 2px solid #202020;
@@ -85,12 +85,12 @@ body {
 	width: 700px;
 }
 
-#modalQuote > div > div {
+#GetAQuote > div > div {
 	padding: 25px;
 }
 
 #navBar {
-	background: rgba(255,255,255,0.95);
+	background: rgba(255,255,255,0.99);
 	font-size: 16px;
 	font-weight: bold;
 	height: 55px;
@@ -166,11 +166,6 @@ body {
 	padding-right: 15px;
 	text-align: left;
 	width: 175px;
-}
-
-#navBar #titleDecor {	
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 #navBar ul {
